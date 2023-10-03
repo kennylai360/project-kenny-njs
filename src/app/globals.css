@@ -1,12 +1,16 @@
 html {
-  min-width: 360px;
+  min-width: 600px;
 }
 
 body {
   background-color: rgb(17, 16, 16);
-  padding: 1rem;
+  margin: 1rem;
 }
 
 p, span, h1, h2, h3, h4 {
   color: white;
+}
+
+Link {
+  text-decoration: none;
 }
