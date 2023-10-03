@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "../app/globals.css";
+import Menu from "@/components/menu";
 
 export const metadata: Metadata = {
   title: "Kenny Portfolio",
@@ -14,15 +15,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        {children}
+      <body>
+        <Menu></Menu>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          {children}
+        </div>
       </body>
     </html>
   );
