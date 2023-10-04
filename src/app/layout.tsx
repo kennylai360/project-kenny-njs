@@ -1,12 +1,20 @@
-import type { Metadata } from "next";
+import '../styles/globals.css';
 
-import "../app/globals.css";
-import Menu from "@/components/menu";
+import type { Metadata } from 'next';
+import appStyles from '../app/app.module.css';
+import Menu from '@/components/menu/menu';
+import { Bitter } from 'next/font/google';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
-  title: "Kenny Portfolio",
-  description: "Portfolio following nextjs documentation",
+  title: 'Kenny Portfolio',
+  description: 'Portfolio following nextjs documentation',
 };
+
+const font = Bitter({
+  weight: '300',
+  subsets: ['latin'],
+});
 
 export default function RootLayout({
   children,
@@ -15,17 +23,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
+      <body className={font.className}>
         <Menu></Menu>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          {children}
-        </div>
+        <div className={appStyles.content}>{children}</div>
       </body>
     </html>
   );
