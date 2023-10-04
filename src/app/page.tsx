@@ -1,6 +1,6 @@
 import appStyles from './app.module.css';
 
-export default function HomePage() {
+export default function HomePage(): React.ReactNode {
   return (
     <>
       <div>
