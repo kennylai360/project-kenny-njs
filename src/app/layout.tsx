@@ -1,10 +1,10 @@
-import '../styles/globals.css';
-
 import type { Metadata } from 'next';
-import appStyles from '../app/app.module.css';
 import Menu from '@/components/menu/menu';
 import { Bitter } from 'next/font/google';
 import Head from 'next/head';
+
+import '../styles/globals.css';
+import appStyles from '../app/app.module.css';
 
 export const metadata: Metadata = {
   title: 'Kenny Portfolio',
