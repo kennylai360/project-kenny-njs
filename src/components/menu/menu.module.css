@@ -1,3 +1,16 @@
+.menuRoot {
+    display:flex;
+    justify-content: space-between;
+}
+
+.sectionLinks {
+    display: flex;
+}
+
+.sectionSocials {
+    display: flex;
+}
+
 .links {
     padding: 10px 20px;
     color: white;
